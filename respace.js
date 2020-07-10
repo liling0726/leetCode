@@ -20,7 +20,7 @@ var respace = function(dictionary, sentence) {
 	dp[0]=0;
 	//遍历sentence
 	for(let i=1;i<=sentence.length;i++){
-		dp[i]=dp[i-1]+1;//预设当前未识别字符串最少未前一个数+1
+		dp[i]=dp[i-1]+1;//预设当前i个字符中最少的未识别字符数
 		//遍历字典，看看从sentence字符串的sentence[i]字符为结尾到sentence[0]是否有匹配的值
 		for(let word of dictionary){
 			//如果匹配
